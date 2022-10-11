@@ -1,0 +1,112 @@
+ PASS  src/array.test.js
+  Joi.array vs Yup.array
+    ✓ both invalidate null (6 ms)
+    ✓ both validate undefined
+    ✓ both invalidate true (1 ms)
+    ✓ both invalidate false
+    ✓ both invalidate {}
+    ✓ both validate []
+    ✓ both invalidate ""
+    ✓ both invalidate 0 (1 ms)
+    ✓ both validate random arrays
+    ✓ both invalidate anything else (1 ms)
+
+ PASS  src/bool.test.js
+  Joi.bool vs Yup.bool
+    ✓ both invalidate null (7 ms)
+    ✓ both validate undefined (1 ms)
+    ✓ both validate true
+    ✓ both validate false
+    ✓ both invalidate {} (1 ms)
+    ✓ both invalidate []
+    ✓ both invalidate "" (1 ms)
+    ✓ Joi invalidates / Yup validates 0
+    ✓ Joi invalidates / Yup validates 1
+    ✓ both validate "true" (1 ms)
+    ✓ both validate "false"
+    ✓ Joi invalidates / Yup validates object with toString() = "true"
+    ✓ Joi invalidates / Yup validates object with toString() = "false"
+    ✓ Joi invalidates / Yup validates object with toString() = "0"
+    ✓ Joi invalidates / Yup validates object with toString() = "1" (1 ms)
+    ✓ both invalidate object with toString() neither "true", "false", "0" or "1"
+    ✓ both invalidate anything else (2 ms)
+
+ PASS  src/object.test.js
+  Joi.object vs Yup.object
+    ✓ both invalidate null (7 ms)
+    ✓ both validate undefined (1 ms)
+    ✓ both invalidate true
+    ✓ both invalidate false (1 ms)
+    ✓ both validate {}
+    ✓ both invalidate [] (2 ms)
+    ✓ both invalidate ""
+    ✓ both invalidate 0 (1 ms)
+    ✓ both invalidate primitive types (1 ms)
+    ✓ Joi invalidates / Yup validates functions
+    ✓ both invalidate arrays (1 ms)
+    ✓ Joi invalidates / Yup validates arrays with a Symbol.toStringTag === "Object"
+    ✓ Joi validates / Yup invalidates Maps (1 ms)
+    ✓ Joi validates / Yup invalidates nearly all built-in object (5 ms)
+    ✓ Joi validates / Yup invalidates any object with Symbol.toStringTag !== "Object" (1 ms)
+
+ PASS  src/number.test.js
+  Joi.number vs Yup.number
+    ✓ both invalidate null (7 ms)
+    ✓ both validate undefined
+    ✓ both invalidate true (1 ms)
+    ✓ both invalidate false
+    ✓ both invalidate {} (1 ms)
+    ✓ both invalidate []
+    ✓ both invalidate "" (3 ms)
+    ✓ both validate 0
+    ✓ both validate any safe number (btw MAX_SAFE_INTEGER and MIN_SAFE_INTEGER)
+    ✓ Joi invalidates / Yup validates MAX_VALUE (1 ms)
+    ✓ both validate MIN_VALUE
+    ✓ both invalidate NaN (1 ms)
+    ✓ Joi invalidates / Yup validates Infinity
+    ✓ both validate random numbers (2 ms)
+    ✓ both validate random number strings (1 ms)
+    ✓ Joi invalidates / Yup validates Number.MIN_VALUE.toString()
+    ✓ (!) Joi invalidates / Yup validates arrays of numbers (1 ms)
+    ✓ both invalidate random alphabetical strings (4 ms)
+    ✓ both invalidate random objects with number value (7 ms)
+
+ PASS  src/string.test.js
+  Joi.string vs Yup.string
+    ✓ both invalidate null (6 ms)
+    ✓ both validate undefined
+    ✓ Joi invalidates / Yup validates true
+    ✓ Joi invalidates / Yup validates false
+    ✓ both invalidate {}
+    ✓ both invalidate [] (1 ms)
+    ✓ Joi invalidates / Yup validates ""
+    ✓ Joi invalidates / Yup validates 0
+    ✓ both validate random strings
+    ✓ both invalidate arrays
+    ✓ both invalidate random arrays with toString (9 ms)
+    ✓ Joi invalidates / Yup validates numbers (1 ms)
+    ✓ both invalidate random objects (10 ms)
+    ✓ Joi invalidates / Yup validates random objects with toString (that returns a string) (14 ms)
+
+ PASS  src/any-mixed.test.js
+  Joi.any vs Yup.mixed
+    ✓ validate null
+    ✓ validate undefined (1 ms)
+    ✓ validate true
+    ✓ validate false
+    ✓ validate 0
+    ✓ validate {} (1 ms)
+    ✓ validate []
+    ✓ validate the empty string
+    ✓ validate random numbers (3 ms)
+    ✓ validate strings (2 ms)
+    ✓ validate number strings (2 ms)
+    ✓ validate random objects (3 ms)
+    ✓ validate objects with toString (3 ms)
+    ✓ validate arrays (1 ms)
+
+Test Suites: 6 passed, 6 total
+Tests:       89 passed, 89 total
+Snapshots:   0 total
+Time:        0.597 s, estimated 1 s
+Ran all test suites.

@@ -1,0 +1,28 @@
+{
+  "name": "joi-yup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/.bin/jest",
+    "start": "babel-node --presets es2015 src/test.js",
+    "build": "npm-build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "esm": "^3.2.25",
+    "joi": "^17.6.2",
+    "lodash": "^4.17.21",
+    "npm-build": "^0.0.1",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.19.3",
+    "babel-jest": "^29.1.2",
+    "jest": "^29.1.2",
+    "jest-cli": "^29.1.2",
+    "superagent": "^8.0.2"
+  }
+}
