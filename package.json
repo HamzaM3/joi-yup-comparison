@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "babel-cli": "^6.26.0",
+    "deep-equal": "^2.0.5",
     "esm": "^3.2.25",
     "joi": "^17.6.2",
     "lodash": "^4.17.21",

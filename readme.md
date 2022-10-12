@@ -1,5 +1,6 @@
 # Joi vs Yup comparison
 
+It is important to say that in general it would be assumed that the input is a JSON-able object.
 ## Validation methods
 
 To summarize:
@@ -54,3 +55,20 @@ Joi on the other hand tests whether the entry is of type `string`
 ### array
 
 Array works perfectly, they just do an `Array.isArray`
+
+## Validation methods
+
+We do two types of actions : testing and parsing
+
+The vast majority of available actions are testing and very few parsing.
+
+The libraries have all the basic methods in common, but they have both their own.
+
+### Philosophies
+
+Yup : cast -> parse -> test
+
+Joi : typetest -> validations (= parse + test) [-> cast]
+
+Me : typetest -> parse -> test [-> cast]
+
