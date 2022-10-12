@@ -67,8 +67,27 @@ The libraries have all the basic methods in common, but they have both their own
 ### Philosophies
 
 Yup : cast -> parse -> test
+- Proof: they say it and previous tests
 
 Joi : typetest -> validations (= parse + test) [-> cast]
+- Proof: `custom` method
 
 Me : typetest -> parse -> test [-> cast]
+- Because it is unexpected to see numbers become strings and 0 become false (as far as I am concerned)
 
+## Order of parsing / testing
+
+It has to be made clear that testing purely doesn't require ordering as each test takes the same input and can be done at the same time and then combined.
+
+**Joi:** I still don't understand but they say this:
+> Rules are defined in an additive fashion and evaluated in order, first the inclusive rules, then the exclusive rules.
+
+What are inclusive and exclusive rules ? And want kind is custom ?
+
+I feel it's left to right but I found some contradictions.
+
+**Yup:** They say it: parse -> tests
+
+And the parsing goes from left to right.
+
+!! Parsing methods like `lowercase` etc. split in two. They parse the input and then they come back to test if it verifies the property.
